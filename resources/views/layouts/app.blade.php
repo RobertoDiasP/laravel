@@ -110,4 +110,15 @@
     </div>
 </body>
 
+<style>
+    .btn-outline-info{
+        border-color: lightsalmon !important;
+        color:black !important;
+    }
+    .btn-outline-info:hover{
+        background-color:rgb(249, 169, 99) !important;
+        color: white !important;
+    }
+</style>
+
 </html>
