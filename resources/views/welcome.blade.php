@@ -13,7 +13,7 @@
             <img src="./../img/banner/imagem1.png" class="d-block" alt="...">
             </div>
             <div class="carousel-item">
-            <img src="./../img/banner/imagem1.png" class="d-block " alt="...">
+            <img src="./../img/banner/imagem2.png" class="d-block " alt="...">
             </div>
             <div class="carousel-item">
             <img src="./../img/banner/imagem1.png" class="d-block" alt="...">
