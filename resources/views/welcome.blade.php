@@ -36,14 +36,48 @@
     <div class="container">
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <button class="nav-link active tabscolor" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Matematica</button>
-                <button class="nav-link tabscolor" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Português</button>
-                <button class="nav-link tabscolor" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Informatica</button>
-                <button class="nav-link tabscolor" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false">Redação</button>
+                <button class="nav-link active tabscolor" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">Concursos</button>
+                <button class="nav-link tabscolor" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Programação</button>
+                <button class="nav-link tabscolor" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Desenvolvimento Web</button>
+                <button class="nav-link tabscolor" id="nav-disabled-tab" data-bs-toggle="tab" data-bs-target="#nav-disabled" type="button" role="tab" aria-controls="nav-disabled" aria-selected="false">Outros</button>
             </div>
         </nav>
         <div class="tab-content" id="nav-tabContent">
             <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+                <div class="row mt-3">
+                    <div class="col-2">
+                        <div class="card card-custumer">
+                            <a href="" class="link-categoria">Matemática</a>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card card-custumer">
+                            <a href="" class="link-categoria">Português</a>
+                        </div>
+                    </div>
+                
+                
+                    <div class="col-2">
+                        <div class="card card-custumer">
+                            <a href="" class="link-categoria">Estatística</a>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card card-custumer">
+                            <a href="" class="link-categoria">Informática</a>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card card-custumer">
+                            <a href="" class="link-categoria">Legislação</a>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <div class="card card-custumer">
+                            <a href="" class="link-categoria">Redação</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="row mt-2">
                     <div class="row mt-2">
                         <div class="col-md-3"> <!-- Ajuste a largura usando colunas -->
@@ -141,5 +175,25 @@
         color: orange !important;
     }
 
+    .card-custumer{
+        border-radius: 25px;
+        width: 150px;
+        height: 70px;
+        border-color: lightsalmon;
+        display: flex; /* Torna a div um contêiner flexível */
+        justify-content: center; /* Alinha horizontalmente ao centro */
+        align-items: center; 
+       
+    }
+
+    .card-custumer:hover{
+        background-color:rgb(249, 169, 99);
+        color: white;
+    }
+
+    .link-categoria{
+        text-decoration: none; /* Remove o sublinhado */
+        color: inherit
+    }
 </style>
 @endsection
