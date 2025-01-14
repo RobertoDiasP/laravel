@@ -12,20 +12,20 @@
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="./../img/banner/imagem1.png" class="d-block" alt="...">
+                    <img src="./../img/banner/imagem3.png" class="d-block" alt="...">
                 </div>
                 <div class="carousel-item">
                     <img src="./../img/banner/imagem2.png" class="d-block " alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="./../img/banner/imagem3.png" class="d-block" alt="...">
+                    <img src="./../img/banner/imagem1.png" class="d-block" alt="...">
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <button id="next-c" class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <button id="prev-c" class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
             </button>
@@ -156,6 +156,23 @@
     </div>
 </section>
 
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // Função para simular o clique no botão
+    function simulateClick() {
+        const nextButton = document.getElementById("prev-c");
+        if (nextButton) {
+            nextButton.click(); // Simula o clique no botão
+        } else {
+            console.warn('Botão com ID "next" não encontrado.');
+        }
+    }
+
+    // Executa a função a cada 4 segundos (4000 milissegundos)
+    setInterval(simulateClick, 4000);
+})
+
+</script>
 
 <style>
     .carousel-item img {
