@@ -2,6 +2,7 @@
 
 @section('content')
 
+<!-- banner -->
 <section>
     <div class="container">
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="true">
@@ -32,6 +33,8 @@
         </div>
     </div>
 </section>
+
+<!-- cursos com filtro -->
 <section class="mt-3">
     <div class="container">
         <nav>
@@ -155,6 +158,14 @@
         </div>
     </div>
 </section>
+
+<!-- em alta -->
+
+<!-- planos -->
+
+<!-- tendencias -->
+
+<!-- footer -->
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
