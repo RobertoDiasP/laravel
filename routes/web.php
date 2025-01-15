@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\ClienteController;
+use App\Http\Controllers\CursoController;
+use App\Http\Controllers\AdmController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -30,6 +32,10 @@ Route::middleware('auth')->group(function () {
     Route::get('/clientes/create', [ClienteController::class, 'create'])->name('clientes.create');
     Route::get('/clientes/index', [ClienteController::class, 'index'])->name('clientes.index');
     Route::post('/clientes', [ClienteController::class, 'store'])->name('clientes.store');
+
+    Route::get('/adm/curso', [CursoController::class, 'cursoindex'])->name('curso.index');
+    Route::get('/adm', [AdmController::class, 'index'])->name('adm.index');
+
 });
 Auth::routes();
 
