@@ -7,12 +7,20 @@
         <div class="row p-3">
             <div class="col">
                 <ul class="list-group list-group-horizontal" style=" list-style-type: none;">
-                    <li class="btn btn-outline-info m-2">Subtipo Curso</li>
-                    <li class="btn btn-outline-info m-2">Tipo Curso</li>
+                    <li class="btn btn-outline-info m-2">
+                        <a href="{{ route('subtipo.index') }}">
+                            Subtipo Curso
+                        </a>
+                    </li>
+                    <li class="btn btn-outline-info m-2">
+                        <a href="{{ route('tipo.index') }}">
+                            Tipo Curso
+                        </a>    
+                    </li>
                     <li class="btn btn-outline-info m-2">Curso</li>
                     <li class="btn btn-outline-info m-2">Aulas</li>
                     <li class="btn btn-outline-info m-2">Pagamentos</li>
-                    </ul>
+                </ul>
             </div>
         </div>
     </div>
@@ -232,6 +240,10 @@
     .btn-outline-info:hover{
         background-color:rgb(249, 169, 99) !important;
         color: white !important;
+    }
+    a {
+     text-decoration: none; /* Remove o sublinhado */
+        color: inherit;        /* Herda a cor do elemento pai */
     }
 </style>
 @endsection

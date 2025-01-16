@@ -33,8 +33,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/clientes/index', [ClienteController::class, 'index'])->name('clientes.index');
     Route::post('/clientes', [ClienteController::class, 'store'])->name('clientes.store');
 
-    Route::get('/adm/curso', [CursoController::class, 'cursoindex'])->name('curso.index');
-    Route::get('/adm', [AdmController::class, 'index'])->name('adm.index');
+    
+        Route::get('/adm/curso', [CursoController::class, 'cursoindex'])->name('curso.index');
+        Route::get('/adm', [AdmController::class, 'index'])->name('adm.index');
+        
+        Route::get('/curso/subtipo', [CursoController::class,'subtipoindex'])->name('subtipo.index');
+        Route::post('/subtipos', [CursoController::class, 'subtipostore'])->name('subtipos.store');
+
+        Route::get('/curso/tipo', [CursoController::class,'tipoindex'])->name('tipo.index');
+        Route::post('/tipo/store', [CursoController::class, 'tipostore'])->name('tipo.store');
 
 });
 Auth::routes();

@@ -82,11 +82,20 @@
                         @endif
                         @else
                         <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                            <a id="navbarDropdown" class="nav-link dropdown-toggle capitalize-text" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                 {{ Auth::user()->name }}
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                <a href="{{ route('adm.index') }}" class="dropdown-item">Perfil</a>
+                                <a href="{{ route('adm.index') }}" class="dropdown-item">Cursos</a>
+                                <a href="{{ route('adm.index') }}" class="dropdown-item">Compras</a>
+                                
+                                @if (Auth::user()->name === 'roberto')
+                                    <a href="{{ route('adm.index') }}" class="dropdown-item">Adm</a>
+                                @endif
+
+                                <hr>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
@@ -118,6 +127,9 @@
     .btn-outline-info:hover{
         background-color:rgb(249, 169, 99) !important;
         color: white !important;
+    }
+    .capitalize-text {
+        text-transform: capitalize;
     }
 </style>
 
