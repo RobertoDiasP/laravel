@@ -39,11 +39,15 @@ Route::middleware('auth')->group(function () {
         
         Route::get('/curso/subtipo', [CursoController::class,'subtipoindex'])->name('subtipo.index');
         Route::post('/subtipos', [CursoController::class, 'subtipostore'])->name('subtipos.store');
+        Route::delete('/subtipos/{id}', [CursoController::class, 'subtipodestroy'])->name('subtipos.destroy');
 
         Route::get('/curso/tipo', [CursoController::class,'tipoindex'])->name('tipo.index');
         Route::post('/tipo/store', [CursoController::class, 'tipostore'])->name('tipo.store');
-
+        Route::middleware(['auth', 'admin.name'])->group(function () {
+            Route::get('/adm', [AdmController::class, 'index'])->name('adm.index');
+        });
 });
+
 Auth::routes();
 
 

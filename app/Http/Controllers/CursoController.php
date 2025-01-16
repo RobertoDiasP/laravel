@@ -35,8 +35,17 @@ class CursoController extends Controller
         ]);
 
         // Redireciona com uma mensagem de sucesso
-        return redirect()->route('cursos.subtipo.index')->with('success', 'Subtipo de curso registrado com sucesso!');
+        return redirect()->route('subtipo.index')->with('success', 'Subtipo de curso registrado com sucesso!');
     }
+
+    public function subtipodestroy($id)
+    {
+        $subtipo = SubtipoCurso::findOrFail($id); // Busca o registro pelo ID
+        $subtipo->delete(); // Exclui o registro
+
+        return redirect()->route('subtipo.index')->with('success', 'Subtipo de curso excluído com sucesso!');
+    }
+
 
     public function tipoindex()
     {

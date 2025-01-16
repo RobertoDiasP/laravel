@@ -15,6 +15,7 @@
                                 <th scope="col">Id</th>
                                 <th scope="col">Nome</th>
                                 <th scope="col">Tipo</th>
+                                <th scope="col">Ações</th> <!-- Coluna para os botões de ação -->
                             </tr>
                         </thead>
                         <tbody>
@@ -23,6 +24,15 @@
                                 <th scope="row">{{ $tipo->id }}</th>
                                 <td>{{ $tipo->nome }}</td>
                                 <td>{{ $tipo->tipoCurso->nome }}</td>
+                                <td>
+                                    <form action="{{ route('subtipos.destroy', $tipo->id) }}" method="POST" style="display: inline;">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Tem certeza que deseja excluir este registro?');">
+                                            Excluir
+                                        </button>
+                                    </form>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>

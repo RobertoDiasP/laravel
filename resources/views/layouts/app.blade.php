@@ -90,10 +90,10 @@
                                 <a href="{{ route('adm.index') }}" class="dropdown-item">Perfil</a>
                                 <a href="{{ route('adm.index') }}" class="dropdown-item">Cursos</a>
                                 <a href="{{ route('adm.index') }}" class="dropdown-item">Compras</a>
-                                
-                                @if (Auth::user()->name === 'roberto')
-                                    <a href="{{ route('adm.index') }}" class="dropdown-item">Adm</a>
-                                @endif
+
+
+                                <a href="{{ route('adm.index') }}" class="dropdown-item">Adm</a>
+
 
                                 <hr>
                                 <a class="dropdown-item" href="{{ route('logout') }}"
@@ -112,7 +112,25 @@
                 </div>
             </div>
         </nav>
-
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+            <div class="container justify-content-center">
+                <ul class="list-group list-group-horizontal" style=" list-style-type: none;">
+                    <li class="btn btn-outline-info m-2 ">
+                        <a href="{{ route('subtipo.index') }}" class="navbaradm">
+                            Subtipo Curso
+                        </a>
+                    </li>
+                    <li class="btn btn-outline-info m-2">
+                        <a href="{{ route('tipo.index') }}" class="navbaradm">
+                            Tipo Curso
+                        </a>
+                    </li>
+                    <li class="btn btn-outline-info m-2">Curso</li>
+                    <li class="btn btn-outline-info m-2">Aulas</li>
+                    <li class="btn btn-outline-info m-2">Pagamentos</li>
+                </ul>
+            </div>
+        </nav>
         <main class="py-4">
             @yield('content')
         </main>
@@ -120,16 +138,25 @@
 </body>
 
 <style>
-    .btn-outline-info{
+    .btn-outline-info {
         border-color: lightsalmon !important;
-        color:black !important;
+        color: black !important;
     }
-    .btn-outline-info:hover{
-        background-color:rgb(249, 169, 99) !important;
+
+    .btn-outline-info:hover {
+        background-color: rgb(249, 169, 99) !important;
         color: white !important;
     }
+
     .capitalize-text {
         text-transform: capitalize;
+    }
+
+    .navbaradm {
+        text-decoration: none;
+        /* Remove o sublinhado */
+        color: inherit;
+        /* Herda a cor do elemento pai */
     }
 </style>
 
