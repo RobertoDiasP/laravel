@@ -58,8 +58,6 @@
                             <a href="" class="link-categoria">Português</a>
                         </div>
                     </div>
-                
-                
                     <div class="col-2">
                         <div class="card card-custumer">
                             <a href="" class="link-categoria">Estatística</a>

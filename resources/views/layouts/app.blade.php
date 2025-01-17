@@ -87,8 +87,8 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <a href="{{ route('adm.index') }}" class="dropdown-item">Perfil</a>
-                                <a href="{{ route('adm.index') }}" class="dropdown-item">Cursos</a>
+                                <a href="{{ route('perfil.index') }}" class="dropdown-item">Perfil</a>
+                                <a href="{{ route('curso.index') }}" class="dropdown-item">Cursos</a>
                                 <a href="{{ route('adm.index') }}" class="dropdown-item">Compras</a>
 
 
@@ -125,7 +125,11 @@
                             Tipo Curso
                         </a>
                     </li>
-                    <li class="btn btn-outline-info m-2">Curso</li>
+                    <li class="btn btn-outline-info m-2">
+                        <a href="{{ route('curso.index') }}" class="navbaradm">
+                            Curso
+                        </a>
+                    </li>
                     <li class="btn btn-outline-info m-2">Aulas</li>
                     <li class="btn btn-outline-info m-2">Pagamentos</li>
                 </ul>

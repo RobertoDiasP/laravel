@@ -29,12 +29,13 @@ Route::get('/', function () {
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::middleware('auth')->group(function () {
-    Route::get('/clientes/create', [ClienteController::class, 'create'])->name('clientes.create');
+    Route::get('/perfil/index', [ClienteController::class, 'create'])->name('perfil.index');
     Route::get('/clientes/index', [ClienteController::class, 'index'])->name('clientes.index');
     Route::post('/clientes', [ClienteController::class, 'store'])->name('clientes.store');
+    Route::post('/professor', [ClienteController::class, 'storeprofessor'])->name('professor.store');
 
     
-        Route::get('/adm/curso', [CursoController::class, 'cursoindex'])->name('curso.index');
+        Route::get('/adm/curso', [CursoController::class, 'cursoindex'])->name('curso.indexss');
         Route::get('/adm', [AdmController::class, 'index'])->name('adm.index');
         
         Route::get('/curso/subtipo', [CursoController::class,'subtipoindex'])->name('subtipo.index');
@@ -46,6 +47,9 @@ Route::middleware('auth')->group(function () {
         Route::middleware(['auth', 'admin.name'])->group(function () {
             Route::get('/adm', [AdmController::class, 'index'])->name('adm.index');
         });
+
+        Route::get('/curso',[CursoController::class, 'index'])->name('curso.index');
+
 });
 
 Auth::routes();

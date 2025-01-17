@@ -48,4 +48,8 @@ class User extends Authenticatable
     {
         return $this->hasOne(Cliente::class);
     }
+    public function professores()
+    {
+        return $this->hasMany(Professor::class); // Relacionamento 1-N com professores
+    }
 }

@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Curso extends Model
 {
     use HasFactory;
-
+    protected $table = 'cursos';
     protected $fillable = ['nome', 'descricao', 'preco', 'subtipo_curso_id', 'professor_id'];
 
     public function subtipoCurso()

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\TipoCurso;
 use App\Models\SubtipoCurso;
+use App\Models\Curso;
 
 class CursoController extends Controller
 {
@@ -67,6 +68,12 @@ class CursoController extends Controller
 
         // Redirecionar ou exibir uma mensagem
         return redirect()->route('tipo.index')->with('success', 'Tipo de curso registrado com sucesso!');
+    }
+
+    public function index()
+    {
+        $cursos = Curso::all();
+        return view('cursos.curso.index', compact('cursos'));
     }
 
 }
