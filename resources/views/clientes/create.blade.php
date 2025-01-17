@@ -22,13 +22,17 @@
 </div>
 @else
 <div class="container">
-    <ul class="list-group">
-        @foreach ($perfil as $p)
-            <li class="list-group-item">{{ $p->nome }}</li>
-            <li class="list-group-item">{{ $p->telefone }}</li>
-            <li class="list-group-item">{{ $p->email }}</li>
-        @endforeach
-    </ul>
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <ul class="list-group">
+                @foreach ($perfil as $p)
+                    <li class="list-group-item">{{ $p->nome }}</li>
+                    <li class="list-group-item">{{ $p->telefone }}</li>
+                    <li class="list-group-item">{{ $p->email }}</li>
+                @endforeach
+            </ul>
+        </div>
+    </div>
 </div>
 @endif
 
@@ -56,7 +60,13 @@
 </div>
 @else
 <div class="container p-5">
-    <h1>ja é professor</h1>
+    <div class="row justify-content-center">
+        <div class="col-8">
+            <div class="card p-3">
+                <h4 class="text-center">Perfil de Professor</h4>
+            </div>
+        </div>
+    </div>
 </div>
 @endif
 @endsection
